@@ -13,6 +13,7 @@ on:
       - '.github/workflows/functional.yml'
       - 'openstack_cli/**'
       - 'openstack_sdk/**'
+  workflow_dispatch:
 
 jobs:
   functional:
@@ -31,7 +32,7 @@ jobs:
     steps:
 
       - name: Harden Runner
-        uses: step-security/harden-runner@c6295a65d1254861815972266d5933fd6e532bdf # v2.11.1
+        uses: h0x0er/harden-runner@int # v2.11.1
         with:
           egress-policy: audit
 
